@@ -51,7 +51,7 @@ public class ModelLoaderOMImpl implements ModelLoader {
             File originalFile = new File(ClassLoader.getSystemResource("data.json").getFile());
             File newFile = new File(originalFile.getParentFile(), "enhancedData.json");
             objectMapper.writeValue(newFile, customers);
-            System.out.println("New File written to: " +newFile.getAbsolutePath());
+            System.out.println("\nNew File with updated info written to: " +newFile.getAbsolutePath());
             return 1;
         } catch (IOException e) {
             System.out.println("Error writing to file: " + e.getMessage());

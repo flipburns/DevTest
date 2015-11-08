@@ -27,6 +27,8 @@ public class Main {
                 customerServices.getMostPopularEyeColour(customers).name() + "\n");
 
         //3 - Output all email addresses sorted alphabetically in ascending order
+        System.out.println("\nAll customer emails in ascending order: \n");
+
         List<Customer> customersSortedByAscEmail = customerServices.getCustomersOrderedByEmail(customers, SortOrder.ASC);
         customersSortedByAscEmail.stream()
                 .map(c -> c.getEmail())
@@ -49,12 +51,14 @@ public class Main {
 
         long timeTakenNanos = System.nanoTime() - timeStart;
         double timeTakenSecs = timeTakenNanos / 1000000000d;
-        System.out.println("Time Taken: " + timeTakenSecs);
+        System.out.println("Time Taken: " + timeTakenSecs + " seconds");
 
 
     }
 
     private static void printNearestCustomers(Iterable<Customer> customers) {
+        System.out.println("\nClosest Customers: \n");
+
         //using a parallel stream to get the customer's nearest neighbour and the distance between them. Then get the minimum distance pair and output.
         CustomerWithNearestNeighbour nearestNeighbours = StreamSupport.stream(customers.spliterator(), true)
                 .map(c -> customerServices.findClosestCustomer(c, customers))
