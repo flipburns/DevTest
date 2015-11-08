@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax.validation:validation-api:1.1.0.Final'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'org.springframework:spring-web:4.2.2.RELEASE'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+    compile 'org.mockito:mockito-all:2.0.2-beta'
+    compile 'commons-io:commons-io:2.4'
+
+    testCompile 'junit:junit:4.11'
+}

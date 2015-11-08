@@ -1,0 +1,4 @@
+.gradle/
+.idea/
+DevTest.iml
+build/
