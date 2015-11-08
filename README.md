@@ -3,7 +3,9 @@
 how to build:
 
 import project into IDE using build.gradle as driver for project
+
 run command `gradle build` from root dir
+
 run the Main.main() method. This will perform all of the requested actions and also print a line specifying the location of the new customers file with the updated addresses.
 
 e.g. 'New File written to: C:\Users\Philip\Downloads\nps_dev_test.tar\DevTest\build\resources\main\enhancedData.json' - this indicates where the new file will appear
